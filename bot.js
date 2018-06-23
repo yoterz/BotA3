@@ -1,4 +1,3 @@
-const express = require('express');
 const botconfig = require('./botconfig.json');
 
 const Discord = require('discord.js')
@@ -9,7 +8,6 @@ bot.on("ready",() => {
 
 })
 
-setInterval(()=>status(), 25000);
 
 bot.on("message", (msg) => {
     if (msg.content === "aa"){
