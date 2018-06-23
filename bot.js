@@ -2,7 +2,6 @@ const botconfig = require('./botconfig.json');
 
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-bot.login(process.env.BOT_TOKEN)
 bot.on("ready",() => {
     console.log('Ready...')
 
@@ -22,3 +21,5 @@ bot.on("message", (msg) => {
     }
 
 })
+
+bot.login(process.env.BOT_TOKEN)
