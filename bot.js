@@ -13,28 +13,13 @@ bot.on("message", (msg) => {
     if (msg.content === "เบีย"){
        titel = "Fujosy"
        picz = "pic.beer"
-       sendembed()         
+       sendembed(titel,picz)         
   
-    }
-    if (msg.content === "เบียร์"){
-      titel = 'Fujosy'
-      picz = pic.beer
-      sendembed()
-    }
-    if (msg.content === "พี่โย"){
-      titel = 'yo yo'
-      picz = pic.yo
-      sendembed()
-    }
-    if (msg.content === "เนส"){
-      titel = 'Nestty'
-      picz = pic.nest
-      sendembed()
     }
 
 })
 
-function sendembed(){
+function sendembed(titel,picz){
      const embed = new Discord.RichEmbed()
     .setTitle(titel)  //หัวข้อ
     .setColor(0x030663)   //ใส่สี
@@ -43,6 +28,3 @@ function sendembed(){
      msg.channel.send({embed});
     
 }
-
-    
-
