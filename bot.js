@@ -14,14 +14,14 @@ bot.on("message", (msg) => {
     if (msg.content === "เบีย"){
        titel = "Fujosy"
        picz = pic.beer
-        sendembed(titel,picz)
+        sendembed()
              
   
     }
 
 })
 
-function sendembed(titel,picz){
+function sendembed(){
      const embed = new Discord.RichEmbed()
     .setTitle(titel)
     .setColor(0x030663)   //ใส่สี
