@@ -11,7 +11,7 @@ bot.on("ready",() => {
 
 bot.on("message", (msg) => {
     if (msg.content === "aa"){
-
+     bot.user.setGame("Bot Testing")
       const embed = new Discord.RichEmbed()
     .setTitle("Test github")  //หัวข้อ
     .setAuthor("Boss Timer BDO", "https://www.picz.in.th/images/2018/06/22/48XhJt.png")  //icon หัวขอ
