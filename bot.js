@@ -12,23 +12,23 @@ bot.on("ready",() => {
 bot.on("message", (msg) => {
     if (msg.content === "เบีย"){
        titel = 'Fujosy'
-       picz = 'pic.beer'
+       picz = pic.beer
        sendembed()         
   
     }
     if (msg.content === "เบียร์"){
       titel = 'Fujosy'
-      picz = 'pic.beer'
+      picz = pic.beer
       sendembed()
     }
     if (msg.content === "พี่โย"){
       titel = 'yo yo'
-      picz = 'pic.yo'
+      picz = pic.yo
       sendembed()
     }
     if (msg.content === "เนส"){
       titel = 'Nestty'
-      picz = 'pic.nest'
+      picz = pic.nest
       sendembed()
     }
 
