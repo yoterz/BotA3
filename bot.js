@@ -49,12 +49,16 @@ bot.on("message", (msg) => {
       if (msg.content === "setname"){
        bot.user.setUsername('น้ำมัน')
      }   
-    
+        
+      if (msg.content === "info"){
+       msg.channel.send('[info] [ทำเบียร์]')
+     }  
     
 function sendembed(){
      const embed = new Discord.RichEmbed()
     .setTitle(titel)
     .setColor(0x030663)   //ใส่สี
+    .setFooter("พิม info  ดูคำสั่ง ", "https://cdn.pixabay.com/photo/2017/08/27/22/02/pig-2687704_960_720.png") //รูป ข้อความล่างสุด
     .setImage(picz)     //รูปใหญ่
     .setTimestamp()  //เวลาด้านล่างสุด
      msg.channel.send({embed});
