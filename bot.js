@@ -12,6 +12,12 @@ bot.on("ready",() => {
 
 
 bot.on("message", (msg) => {
+    if (msg.content === "ทำเบียร์"){
+       titel = "เบียร์"
+       picz = pic.beerz
+        sendembed()
+     }
+    
     if (msg.content === "เบีย"){
        titel = "Fujosy"
        picz = pic.beer
