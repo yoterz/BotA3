@@ -10,15 +10,39 @@ bot.on("ready",() => {
 
 
 bot.on("message", (msg) => {
-    if (msg.content === "aa"){
-     bot.user.setGame("Bot Testing")
-      const embed = new Discord.RichEmbed()
-    .setTitle("Test github")  //หัวข้อ
-    .setAuthor("Boss Timer BDO", "https://www.picz.in.th/images/2018/06/22/48XhJt.png")  //icon หัวขอ
-
-    .setTimestamp()  //เวลาด้านล่างสุด
-     msg.channel.send({embed});
-    
+    if (msg.content === "เบีย"){
+       titel = 'Fujosy'
+       picz = 'pic.beer'
+       sendembed()         
+  
+    }
+    if (msg.content === "เบียร์"){
+      titel = 'Fujosy'
+      picz = 'pic.beer'
+      sendembed()
+    }
+    if (msg.content === "พี่โย"){
+      titel = 'yo yo'
+      picz = 'pic.yo'
+      sendembed()
+    }
+    if (msg.content === "เนส"){
+      titel = 'Nestty'
+      picz = 'pic.nest'
+      sendembed()
     }
 
 })
+
+function sendembed(){
+     const embed = new Discord.RichEmbed()
+    .setTitle(titel)  //หัวข้อ
+    .setColor(0x030663)   //ใส่สี
+    .setImage(picz)     //รูปใหญ่
+    .setTimestamp()  //เวลาด้านล่างสุด
+     msg.channel.send({embed});
+    
+}
+
+    
+
