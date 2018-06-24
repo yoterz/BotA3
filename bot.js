@@ -11,8 +11,8 @@ bot.on("ready",() => {
 
 bot.on("message", (msg) => {
     if (msg.content === "เบีย"){
-       titel = 'Fujosy'
-       picz = pic.beer
+       titel = "Fujosy"
+       picz = "pic.beer"
        sendembed()         
   
     }
