@@ -9,18 +9,6 @@ bot.on("ready",() => {
 
 })
 
-
-bot.on("message", (msg) => {
-    if (msg.content === "เบีย"){
-       titel = "Fujosy"
-       picz = pic.beer
-        sendembed()
-             
-  
-    }
-
-})
-
 function sendembed(){
      const embed = new Discord.RichEmbed()
     .setTitle(titel)
@@ -30,3 +18,16 @@ function sendembed(){
      msg.channel.send({embed});
     
 }
+
+bot.on("message", (msg) => {
+    if (msg.content === "เบีย"){
+       titel = "Fujosy"
+       picz = pic.beer
+        sendembed()
+             
+  
+    }
+  
+
+})
+
