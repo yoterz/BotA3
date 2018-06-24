@@ -40,7 +40,9 @@ bot.on("message", (msg) => {
     
         
     
-    
+      if (msg.content === "setname"){
+       bot.user.setUsername('น้ำมัน')
+     }   
     
     
 function sendembed(){
