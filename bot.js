@@ -51,7 +51,7 @@ bot.on("message", (msg) => {
      }   
         
       if (msg.content === "info"){
-       msg.channel.send('[info] [ทำเบียร์]')
+       msg.channel.send('```'+'[info]  [ทำเบียร์]'+'```')
      }  
     
 function sendembed(){
