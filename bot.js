@@ -9,15 +9,7 @@ bot.on("ready",() => {
 
 })
 
-function sendembed(){
-     const embed = new Discord.RichEmbed()
-    .setTitle(titel)
-    .setColor(0x030663)   //ใส่สี
-    .setImage(picz)     //รูปใหญ่
-    .setTimestamp()  //เวลาด้านล่างสุด
-     msg.channel.send({embed});
-    
-}
+
 
 bot.on("message", (msg) => {
     if (msg.content === "เบีย"){
@@ -28,6 +20,13 @@ bot.on("message", (msg) => {
   
     }
   
-
+function sendembed(){
+     const embed = new Discord.RichEmbed()
+    .setTitle(titel)
+    .setColor(0x030663)   //ใส่สี
+    .setImage(picz)     //รูปใหญ่
+    .setTimestamp()  //เวลาด้านล่างสุด
+     msg.channel.send({embed});
+    }
 })
 
