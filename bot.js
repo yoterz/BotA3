@@ -1,6 +1,6 @@
 const botconfig = require('./botconfig.json');
 const pic = require('./pic.json');
-const pic = require('./randompicz.js');
+const randompicz = require('./randompicz.js');
 
 const Discord = require('discord.js')
 const bot = new Discord.Client()
