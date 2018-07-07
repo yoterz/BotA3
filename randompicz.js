@@ -11,7 +11,7 @@ exports.beer = function () {
 
     return {
         beerz: beerpic[random],
-        yoz: yo[random]
+        
     }
 }
 
