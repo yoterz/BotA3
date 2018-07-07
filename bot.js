@@ -1,6 +1,6 @@
 const botconfig = require('./botconfig.json');
 const pic = require('./pic.json');
-const pic = require('./picz.js');
+const pic = require('./randompicz.js');
 
 const Discord = require('discord.js')
 const bot = new Discord.Client()
@@ -21,27 +21,27 @@ bot.on("message", (msg) => {
     
     if (msg.content === "เบีย"){
        titel = "Fujosy"
-       picz = pic.beer().beerz
+       picz = randompicz.beer().beerz
         sendembed()
      }
     if (msg.content === "เบียร์"){
        titel = "Fujosy"
-       picz = pic.beer().beerz
+       picz = randompicz.beer().beerz
         sendembed()
      }
       if (msg.content === "พี่โย"){
        titel = "Yoyo"
-       picz = pic.yo().yoz
+       picz = randompicz.yo().yoz
         sendembed()
      }
       if (msg.content === "เนส"){
        titel = "Nestty"
-       picz = pic.nest().nestz
+       picz = randompicz.nest().nestz
         sendembed()
      }
       if (msg.content === "nest"){
        titel = "Nestty"
-       picz = pic.nest().nestz
+       picz = randompicz.nest().nestz
         sendembed()
      }
     
