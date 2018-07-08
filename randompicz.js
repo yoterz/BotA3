@@ -1,5 +1,5 @@
 exports.beer = function () {
-    number = 6
+    number = 8
     var random = Math.floor(Math.random() * (number - 1 + 1))
     var beerpic = [
         'https://stickershop.line-scdn.net/stickershop/v1/product/1258914/LINEStorePC/main@2x.png;compress=true?__=20161019',
