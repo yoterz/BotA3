@@ -7,7 +7,8 @@ exports.beer = function () {
         'https://pbs.twimg.com/profile_images/424938578376810496/dyNkHXXz.jpeg',
         'https://stickershop.line-scdn.net/stickershop/v1/product/1021012/LINEStorePC/main@2x.png;compress=true',
         'https://stickershop.line-scdn.net/stickershop/v1/product/1306903/LINEStorePC/main@2x.png;compress=true?__=20161019',
-        'https://stickershop.line-scdn.net/stickershop/v1/product/1228769/LINEStorePC/main@2x.png;compress=true']
+        'https://stickershop.line-scdn.net/stickershop/v1/product/1228769/LINEStorePC/main@2x.png;compress=true',
+        'https://stickershop.line-scdn.net/stickershop/v1/product/1795291/LINEStorePC/main@2x.png;compress=true']
 
     return {
         beerz: beerpic[random],
@@ -20,7 +21,7 @@ exports.yo = function () {
     var random = Math.floor(Math.random() * (number - 1 + 1))
     var yopic = [
         'https://stickershop.line-scdn.net/stickershop/v1/product/4456/LINEStorePC/main@2x.png;compress=true',
-        'https://stickershop.line-scdn.net//stickershop/v1/product/9032/iphone/main@2x.png',
+        'https://stickershop.line-scdn.net/stickershop/v1/product/1277438/LINEStorePC/main@2x.png;compress=true',
         'https://f.ptcdn.info/375/039/000/o15vuwahkJhKBjhuSLr-o.jpg']
 
     return {
