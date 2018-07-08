@@ -8,7 +8,8 @@ exports.beer = function () {
         'https://stickershop.line-scdn.net/stickershop/v1/product/1021012/LINEStorePC/main@2x.png;compress=true',
         'https://stickershop.line-scdn.net/stickershop/v1/product/1306903/LINEStorePC/main@2x.png;compress=true?__=20161019',
         'https://stickershop.line-scdn.net/stickershop/v1/product/1228769/LINEStorePC/main@2x.png;compress=true',
-        'https://stickershop.line-scdn.net/stickershop/v1/product/1795291/LINEStorePC/main@2x.png;compress=true']
+        'https://stickershop.line-scdn.net/stickershop/v1/product/1795291/LINEStorePC/main@2x.png;compress=true',
+        'https://patthemarketingman.files.wordpress.com/2015/08/16925_405566319653174_2686104608202267855_n.jpg']
 
     return {
         beerz: beerpic[random],
