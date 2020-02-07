@@ -2,10 +2,11 @@ const Discord = require("discord.js")
 const botconfig = require("./botconfig.json")
 var fs = require('fs');
 var bot = new Discord.Client()
-var channelID = botconfig.channelID
+var channelID = process.env.ch_ID
 const JsonBinIoApi = require('jsonbin-io-api');
-const api = new JsonBinIoApi(botconfig.SecretKey);
+const api = new JsonBinIoApi(process.env.Secret_key);
 var sleep = require('sleep');
+var binID = process.env.bin_ID
 
 //var add = api.readBin({id: botconfig.binID,version: 'latest'}).then(datajson =>{ });   
 
@@ -54,7 +55,7 @@ bot.on("message", (msg) => {
 
 function getDataz(){
     
-    api.readBin({id: botconfig.binID,version: 'latest'})
+    api.readBin({id: binID,version: 'latest'})
     .then(datajson =>{
         var newobj =""
         console.log(datajson.length)
@@ -71,7 +72,7 @@ function getDataz(){
 
  function updateDataz(nametime){
     
-    api.readBin({id: botconfig.binID,version: 'latest'})
+    api.readBin({id: binID,version: 'latest'})
     .then(datajson =>{
         updateDataz2(datajson,nametime)
      });   
@@ -126,7 +127,7 @@ function updateDataz2(obj,nametime){
         }
     } 
 
-   api.updateBin({id: botconfig.binID,data: obj,versioning: true}).then(); //******update data json */
+   api.updateBin({id: binID,data: obj,versioning: true}).then(); //******update data json */
    bot.channels.get(channelID).send("`add  >> "+nametime[0]+" : "+nametime[1]+"`")
      
   
@@ -136,7 +137,7 @@ function updateDataz2(obj,nametime){
 
 function min2max(){
     
-    api.readBin({id: botconfig.binID,version: 'latest'})
+    api.readBin({id: binID,version: 'latest'})
     .then(datajson =>{
         min2maxz(datajson)
      });   
@@ -241,4 +242,4 @@ function timestart(){
   }
 
   
-bot.login(botconfig.tokenbotdiscord)
+bot.login(process.env.BOT_TOKEN)
