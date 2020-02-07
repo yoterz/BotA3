@@ -37,14 +37,15 @@ bot.on("message", (msg) => {
         }
       }   
 
-      if (msg.content.startsWith("upd")){ 
+
+    if (msg.content.startsWith("nameboss")){ 
         if (msg.channel.id === channelID){ 
-              console.log(">update")
-            updateDataz()
-                    
+                var data = fs.readFileSync('bosslist.txt', 'utf8');
+                console.log(">Nameboss")
+                //console.log(data.toString());   
+                msg.channel.send("```"+data.toString()+"```")
         }
       }   
-
       
       
       
