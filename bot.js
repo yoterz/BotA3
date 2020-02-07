@@ -364,7 +364,7 @@ function alertz(){
   
                 //console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
   
-              if ( timeAlerz > 330000 && timeAlerz < 360000 ){
+              if ( timeAlerz > 315000 && timeAlerz < 345000 ){
                 ++alz
                 //console.log(alz)
                 if (alz === 2 ){
