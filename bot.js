@@ -334,8 +334,8 @@ function alertz(){
   
       if( obj[i].bossspawn != "0") {
               // ดึงเวลาปัจจุบัน
-              var currentUtcTimez = new Date();
-              //var currentUtcTimez = currentUtcTimezz +25200000
+              var currentUtcTimezz = new Date();
+              var currentUtcTimez = currentUtcTimezz +25200000
               var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
   
               // เวลาบอสเกิด
