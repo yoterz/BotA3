@@ -1,0 +1,29 @@
+[Gludio]
+chertube    3hr lv.40
+basilla     4hr lv.40
+kelsos      5hr lv.40
+shaban      12hrlv.45
+queenant    6hr lv.50
+
+[Dion]
+felice      3hr lv.40
+talakin     5hr lv.40
+enkura      4hr lv.40
+platedry    6hr lv.40
+cruma       8hr lv.50
+tempest     3hr lv.45
+คูม่าชั้น3      8hr lv.45
+คูม่าชั้น6      10hrlv.55 
+coreshunt   10hrlv.60
+sarka       5hr lv.45
+timmitris   8hr lv.40
+stan        7hr lv.45
+
+[Giran]
+medusa      4hr     lv.55
+blacklily   4hr     lv.65
+mathura     4.30hr  lv.50
+breka       2.30hr  lv.50
+pannarod    3.30hr  lv.50
+behemoth    6hr     lv.65
+dragonbeast 12hr   lv.75
