@@ -3,13 +3,16 @@ const botconfig = require("./botconfig.json")
 var fs = require('fs');
 var bot = new Discord.Client()
 var channelID = process.env.ch_ID
+//var channelID = botconfig.channelID
 const JsonBinIoApi = require('jsonbin-io-api');
 const api = new JsonBinIoApi(process.env.Secret_key);
+//const api = new JsonBinIoApi(botconfig.SecretKey);
 var sleep = require('sleep');
 var binID = process.env.bin_ID
+//var binID = botconfig.binID
 
 //var add = api.readBin({id: botconfig.binID,version: 'latest'}).then(datajson =>{ });   
-
+var newobj2
 
 
 
@@ -26,6 +29,7 @@ bot.on("message", (msg) => {
     if (msg.channel.id === channelID){  
       var namebozz = msg.content.split('+')
       var nametime = namebozz[1].split(' ')
+           
       updateDataz(nametime)
     }
   }  
@@ -48,8 +52,32 @@ bot.on("message", (msg) => {
                 msg.channel.send("```"+data.toString()+"```")
         }
       }   
+
+      if (msg.content.startsWith("save")){ 
+        if (msg.channel.id === channelID){ 
+                
+                //console.log(newobj2)
+                if(newobj2){
+                  console.log("มี")
+                  api.updateBin({id: binID,data: newobj2,versioning: true}).then(); //******update data json */
+                  bot.channels.get(channelID).send("`> Save Data แล้ว`")
+                  
+                }else {
+                  console.log("ไม่มี")
+                  bot.channels.get(channelID).send("`!!!! Save Data ไม่ได้ ไม่มีข้อมูล ให้พิมพ์ list เพื่อตรวจสอบก่อน`")
+                }
+                
+        }
+      }   
       
-      
+      if (msg.content.startsWith("data")){ 
+        if (msg.channel.id === channelID){ 
+              console.log(">data")
+             
+            getDataz()
+           
+        }
+      }   
       
     
 })
@@ -58,15 +86,9 @@ function getDataz(){
     
     api.readBin({id: binID,version: 'latest'})
     .then(datajson =>{
-        var newobj =""
-        console.log(datajson.length)
-        for(let i = 0; i < datajson.length ; ++i){
-            if(datajson[i].deadtime > 0){
-                //console.log(datajson[i])
-               newobj = newobj+JSON.stringify(datajson[i])
-            }
-        }
-        bot.channels.get(channelID).send(JSON.stringify(newobj))
+        
+        console.log(datajson)
+        
      });   
  }
 
@@ -82,7 +104,7 @@ function updateDataz2(obj,nametime){
    
     console.log(nametime[0]+" : "+nametime[1])
     for(let i = 0; i < obj.length ; ++i){
-        if(obj[i].name === nametime[0]){
+        if(obj[i].name === nametime[0]){  //ตรวจชื่อ
             obj[i].deadtime = nametime[1] //แทนค่า .deadtime  ใน obj 
 
             //obj[i].bossspwan
@@ -106,7 +128,7 @@ function updateDataz2(obj,nametime){
                var countDownDatez = new Date(bossDeadTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
             // console.log(bossDeadTimez)
             //console.log(countDownDatez+"+"+obj[i].cooldown)
-             var timespawn = countDownDatez+obj[i].cooldown  //เวลาบอสตาย + คูลดาว + 7hr
+             var timespawn = countDownDatez+obj[i].cooldown//+25200000  //เวลาบอสตาย + คูลดาว + 7hr***
              obj[i].timems = timespawn   ////แทนค่า .timems  ใน obj 
              //console.log(timespawn)
                  var days = Math.floor(timespawn / (1000 * 60 * 60 * 24));
@@ -123,7 +145,7 @@ function updateDataz2(obj,nametime){
                    }
                  
                    //console.log("spawn  =  "+hours+":"+minutes)
-                   var bosstimespawn = hours+":"+minutes
+                   var bosstimespawn = hours+"."+minutes
                    obj[i].bossspawn = bosstimespawn   //แทนค่า .bossspawn  ใน obj 
             }
         }
@@ -131,6 +153,7 @@ function updateDataz2(obj,nametime){
 
    api.updateBin({id: binID,data: obj,versioning: true}).then(); //******update data json */
    bot.channels.get(channelID).send("`add  >> "+nametime[0]+" : "+nametime[1]+"`")
+
      
   
 }
@@ -161,7 +184,7 @@ function min2maxz(obj){
                   }
              }
       }
-      var newobj2 = newobj
+      newobj2 = newobj
       //console.log(newobj)
       timestart()
       for ( var j = 0 ; j < newobj2.length ; ++j){
@@ -173,7 +196,7 @@ function min2maxz(obj){
                 var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
   
                 // เวลาบอสเกิด
-                var tbozz = newobj2[j].bossspawn.split(':') //แยกกเวลา h m
+                var tbozz = newobj2[j].bossspawn.split('.') //แยกกเวลา h m
                 //console.log(tbozz[0]+" : "+tbozz[1])
                 var hxx = tbozz[0]
                 var mxx = tbozz[1]
@@ -184,7 +207,7 @@ function min2maxz(obj){
                 //console.log(chktimenow)
                 if (chktimenow <= -1000 ){
                     newobj2[j].deadtime = newobj[j].bossspawn
-                        var tdzz = newobj2[j].deadtime.split(':') //แยกเวลา h m
+                        var tdzz = newobj2[j].deadtime.split('.') //แยกเวลา h m
                         var hzz = tdzz[0]
                         var mzz = tdzz[1]
 
@@ -192,7 +215,7 @@ function min2maxz(obj){
                         var bossDeadTimezz = bossDeadTimezz2+25200000
                         var countDownDatezz = new Date(bossDeadTimezz.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
                        
-                        var timespawnz = countDownDatezz+newobj2[j].cooldown  //เวลาบอสตาย + คูลดาว + 7hr
+                        var timespawnz = countDownDatezz+newobj2[j].cooldown //+25200000 //เวลาบอสตาย + คูลดาว + 7hr****
                         newobj2[j].timems = timespawnz   ////แทนค่า .timems  ใน obj 
                        
                             var daysz = Math.floor(timespawnz / (1000 * 60 * 60 * 24));
@@ -209,7 +232,7 @@ function min2maxz(obj){
                             }
                             
                             //console.log("spawn  =  "+hours+":"+minutes)
-                            var bosstimespawnz = hoursz+":"+minutesz
+                            var bosstimespawnz = hoursz+"."+minutesz
                             newobj2[j].bossspawn = bosstimespawnz   //แทนค่า .bossspawn  ใน obj 
 
                             alertz = alertz+newobj2[j].name+"    ["+newobj2[j].deadtime+"]   "+newobj2[j].cooldown /(1000 * 60 * 60) +" ชม.    ["+newobj2[j].bossspawn+"]*<คาดเดา>\n"
@@ -219,11 +242,59 @@ function min2maxz(obj){
                 }
             }
       }
-  
-  
-      //console.log(JSON.stringify(newobj))
-      bot.channels.get(channelID).send("```css\n#"+alertz+"```")
+
+      //หา min time ใน newobj2
+        timestart()
+        var testmin = 0
+        var min = 0
+        for ( i = 0; i < newobj2.length; ++i) {
+      
+          if( newobj2[i].bossspawn != "0") {
+          
+                var tboss = newobj2[i].bossspawn.split('.') //แยกกเวลา h m
+                //console.log(tboss[0]+":"+tboss[1])
+                
+                var hzz = tboss[0]
+                var mzz = tboss[1]
+                //เวลาที่ อยู่ใน list 
+                var Timebossszv = new Date(year , month ,d , hzz , mzz , s); // เวลาตายของบอส แต่ละตัว
+                var Timebosssz = Timebossszv
+                var mintimez = new Date(Timebosssz.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
+                var timespawnz = mintimez//+25200000  //เวลาบอสตาย + คูลดาว + 7hr
+                //เวลาปัจุบัน
+                var currentUtcTimezv = new Date(); // This is in UTC
+                var currentUtcTimez = currentUtcTimezv
+                var timenowz = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
+                var timenow = timenowz//+25200000
+              if( timespawnz > timenow ){
+                if (testmin == 0){testmin = timespawnz}
+                if (testmin >= timespawnz && newobj2[i].deadtime !== "0"){
+                  testmin = timespawnz
+                  min = newobj2[i]     //ชื่อ และ เวลา ตัวที่จะเกิดต่อไป
+                }
+              }  
+          }
+        }   
+            //console.log(min)
+            //bot.channels.get(channelID).send("```yaml\n NEXT Boss : "+min.name+"  เวลาเกิด :  "+min.bossspawn+" น.```")
+     
+      
+      //console.log(JSON.stringify(newobj2))
+      //bot.channels.get(channelID).send("```css\n#"+alertz+"```")
       //mintimeboss()
+
+      const embed = new Discord.RichEmbed()
+      // .setTitle(titel)  //หัวข้อ
+       //.setAuthor("Boss Timer ThBDO", "https://www.picz.in.th/images/2018/06/22/48XhJt.png")  //icon หัวขอ
+       .setColor(0x112263)   //ใส่สี
+       .setDescription("```css\n#"+alertz+"```")   //รายละเอียด
+       .addField("```บอสตัวต่อไป #```","```yaml\n NEXT Boss : "+min.name+"  เวลาเกิด :  "+min.bossspawn+" น.```")
+       //.setFooter("Boss Timer ThBDO ") //รูป ข้อความล่างสุด
+      //.setImage(PicRo)     //รูปใหญ่
+      // .setThumbnail(chkboss().imgboss)   //รูปเล็กขวาบนผ
+       .setTimestamp()  //เวลาด้านล่างสุดผ
+        bot.channels.get(channelID).send({embed})
+
   }
 
 
@@ -277,3 +348,4 @@ function timestart(){
 
 
 bot.login(process.env.BOT_TOKEN)
+//bot.login(botconfig.tokenbotdiscord)
