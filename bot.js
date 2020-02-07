@@ -327,7 +327,7 @@ function alertz(){
  }
   function alertzz(obj){
     // เอาเวลา ( bossspawn - เวลาปัจจุบัน ) = 5(300000ms) นาที     ให้แจ้งเตื่อน
-    //console.log("Alertz")
+    console.log("Alertz")
     timestart()
       
     for ( i = 0; i < obj.length; ++i) {
@@ -362,11 +362,11 @@ function alertz(){
                       minutes = "0" + minutes;
                     }
   
-                //console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
+                console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
   
               if ( timeAlerz > 285000 && timeAlerz < 315000 ){
                 ++alz
-                //console.log(alz)
+                console.log(alz)
                 if (alz === 2 ){
                  // min2max()
  
