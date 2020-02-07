@@ -362,16 +362,15 @@ function alertz(){
                       minutes = "0" + minutes;
                     }
   
-                //console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
+                console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
   
               if ( timeAlerz > 305000 && timeAlerz < 335000 ){
                 ++alz
                 console.log(alz)
                 if (alz === 2 ){
-                 // min2max()
+                 
  
                 const embed = new Discord.RichEmbed()
-
                  .setColor(0xff0000)   //ใส่สี
                  //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
                  .addField("```บอสตัวต่อไป #```","```yaml\n อีก 5 นาที : "+obj[i].name+"  เวลาเกิด :  "+obj[i].bossspawn+" น.```")
@@ -384,9 +383,8 @@ function alertz(){
               if ( timeAlerz > -15000 && timeAlerz < 15000 ){
               ++alz
               if (alz === 2 ){
-              min2max()
-              
-              alz = 0
+                    alz = 0
+                    min2max()
               }
             }
           
