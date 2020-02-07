@@ -18,6 +18,7 @@ bot.on("ready",function(){
     console.log("Ready.....................")
 })
 
+setInterval(()=>status(), 25000);
 
 bot.on("message", (msg) => {
 
@@ -241,5 +242,35 @@ function timestart(){
     //months = new Array('Jan', 'feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
   }
 
+  function status(){     
   
+
+    // ดึงเวลาปัจจุบัน
+    var currentUtcTimez = new Date();
+    var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
+    // เวลาที่จะถึง-เวลาปัจจุบัน
+    var distance = now +25200000;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   
+       //**แต่งเวลาให้สวย
+      if (hours < 10) {
+        hours = "0" + hours;
+       }
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+       }
+
+     bot.user.setGame(hours + ":"+ minutes+ " น.")
+    
+    
+
+    //bot.user.setGame("BotL2M")
+}
+
+
 bot.login(process.env.BOT_TOKEN)
