@@ -13,6 +13,7 @@ var binID = process.env.bin_ID
 
 //var add = api.readBin({id: botconfig.binID,version: 'latest'}).then(datajson =>{ });   
 var newobj2
+var alz = 0
 
 
 
