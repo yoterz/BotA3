@@ -362,7 +362,7 @@ function alertz(){
                       minutes = "0" + minutes;
                     }
   
-                console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
+                //console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
   
               if ( timeAlerz > 285000 && timeAlerz < 315000 ){
                 ++alz
@@ -379,7 +379,6 @@ function alertz(){
                   bot.channels.get(channelID).send({embed})
                 alz = 0
                 }
-                
               }
           
               if ( timeAlerz > -29000 && timeAlerz < -1000 ){
