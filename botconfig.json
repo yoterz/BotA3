@@ -1,4 +1,6 @@
 {
-    "token": "",
-    "channelName": "general"
+    "tokenbotdiscord": process.env.BOT_TOKEN,
+    "channelID" : process.env.ch_ID,
+    "binID" : process.env.bin_ID,
+    "SecretKey" : process.env.Secret_key
 }
