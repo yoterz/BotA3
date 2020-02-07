@@ -105,7 +105,7 @@ function updateDataz2(obj,nametime){
                var countDownDatez = new Date(bossDeadTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
             // console.log(bossDeadTimez)
             //console.log(countDownDatez+"+"+obj[i].cooldown)
-             var timespawn = countDownDatez+obj[i].cooldown+25200000  //เวลาบอสตาย + คูลดาว + 7hr
+             var timespawn = countDownDatez+obj[i].cooldown  //เวลาบอสตาย + คูลดาว + 7hr
              obj[i].timems = timespawn   ////แทนค่า .timems  ใน obj 
              //console.log(timespawn)
                  var days = Math.floor(timespawn / (1000 * 60 * 60 * 24));
@@ -189,7 +189,7 @@ function min2maxz(obj){
                         var bossDeadTimezz = new Date(year , month ,d , hzz , mzz , s); // เวลาตายของบอส แต่ละตัว
                         var countDownDatezz = new Date(bossDeadTimezz.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
                        
-                        var timespawnz = countDownDatezz+newobj2[j].cooldown+25200000  //เวลาบอสตาย + คูลดาว + 7hr
+                        var timespawnz = countDownDatezz+newobj2[j].cooldown  //เวลาบอสตาย + คูลดาว + 7hr
                         newobj2[j].timems = timespawnz   ////แทนค่า .timems  ใน obj 
                        
                             var daysz = Math.floor(timespawnz / (1000 * 60 * 60 * 24));
@@ -249,7 +249,7 @@ function timestart(){
     var currentUtcTimez = new Date();
     var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
     // เวลาที่จะถึง-เวลาปัจจุบัน
-    var distance = now +25200000;
+    var distance = now ;
     
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
