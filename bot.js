@@ -334,8 +334,8 @@ function alertz(){
   
       if( obj[i].bossspawn != "0") {
               // ดึงเวลาปัจจุบัน
-              var currentUtcTimezz = new Date();
-              var currentUtcTimez = currentUtcTimezz +25200000
+              var currentUtcTimez = new Date();
+              //var currentUtcTimez = currentUtcTimezz +25200000
               var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
   
               // เวลาบอสเกิด
@@ -343,8 +343,8 @@ function alertz(){
               //console.log(tbozs[0]+":"+tbozs[1])
               var hxz = tbozs[0]
               var mxz = tbozs[1]
-              var Timebossszz = new Date(year , month ,d , hxz , mxz , s); // เวลาตายของบอส แต่ละตัว
-              //var Timebossszz = Timebossszzz +25200000
+              var Timebossszzz = new Date(year , month ,d , hxz , mxz , s); // เวลาตายของบอส แต่ละตัว
+              var Timebossszz = Timebossszzz +25200000
               var bossspawntimez = new Date(Timebossszz.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
   
               var timeAlerz = bossspawntimez - now
