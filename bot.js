@@ -22,6 +22,7 @@ bot.on("ready",function(){
 })
 
 setInterval(()=>status(), 25000);
+setInterval(()=>alertz(), 30000);
 
 bot.on("message", (msg) => {
 
@@ -316,9 +317,78 @@ function timestart(){
     //months = new Array('Jan', 'feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
   }
 
+
+function alertz(){
+     api.readBin({id: binID,version: 'latest'})
+    .then(datajson =>{
+        alertzz(datajson)
+     });   
+ }
+  function alertzz(obj){
+    // เอาเวลา ( bossspawn - เวลาปัจจุบัน ) = 5(300000ms) นาที     ให้แจ้งเตื่อน
+    //console.log("Alertz")
+    timestart()
+      
+    for ( i = 0; i < obj.length; ++i) {
+  
+      if( obj[i].bossspawn != "0") {
+              // ดึงเวลาปัจจุบัน
+              var currentUtcTimezz = new Date();
+              var currentUtcTimez = currentUtcTimezz +25200000
+              var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
+  
+              // เวลาบอสเกิด
+              var tbozs = obj[i].bossspawn.split('.') //แยกกเวลา h m
+              //console.log(tbozs[0]+":"+tbozs[1])
+              var hxz = tbozs[0]
+              var mxz = tbozs[1]
+              var Timebossszzz = new Date(year , month ,d , hxz , mxz , s); // เวลาตายของบอส แต่ละตัว
+              var Timebossszz = Timebossszzz +25200000
+              var bossspawntimez = new Date(Timebossszz.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
+  
+              var timeAlerz = bossspawntimez - now
+  
+                // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(timeAlerz / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((timeAlerz % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((timeAlerz % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((timeAlerz % (1000 * 60)) / 1000);
+                    //**แต่งเวลาให้สวย
+                    if (hours < 10) {
+                      hours = "0" + hours;
+                    }
+                    if (minutes < 10) {
+                      minutes = "0" + minutes;
+                    }
+  
+                //console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
+  
+              if ( timeAlerz > 285000 && timeAlerz < 315000 ){
+                ++alz
+                //console.log(alz)
+                if (alz === 2 ){
+                 // min2max()
+ 
+                const embed = new Discord.RichEmbed()
+
+                 .setColor(0xff0000)   //ใส่สี
+                 //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
+                 .addField("```บอสตัวต่อไป #```","```yaml\n อีก 5 นาที : "+obj[i].name+"  เวลาเกิด :  "+obj[i].bossspawn+" น.```")
+                 .setTimestamp()  //เวลาด้านล่างสุดผ
+                  bot.channels.get(channelID).send({embed})
+                alz = 0
+                }
+                
+              }
+
+       }
+    }
+  
+  }
+
+
   function status(){     
   
-
     // ดึงเวลาปัจจุบัน
     var currentUtcTimez = new Date();
     var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
