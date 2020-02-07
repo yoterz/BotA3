@@ -101,7 +101,8 @@ function updateDataz2(obj,nametime){
                var hz = tdz[0]
                var mz = tdz[1]
 
-               var bossDeadTimez = new Date(year , month ,d , hz , mz , s); // เวลาตายของบอส แต่ละตัว
+               var bossDeadTimez1 = new Date(year , month ,d , hz , mz , s); // เวลาตายของบอส แต่ละตัว
+               var bossDeadTimez = bossDeadTimez1+25200000
                var countDownDatez = new Date(bossDeadTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
             // console.log(bossDeadTimez)
             //console.log(countDownDatez+"+"+obj[i].cooldown)
@@ -176,7 +177,8 @@ function min2maxz(obj){
                 //console.log(tbozz[0]+" : "+tbozz[1])
                 var hxx = tbozz[0]
                 var mxx = tbozz[1]
-                var Timebossszzx = new Date(year , month ,d , hxx , mxx , s); // เวลาตายของบอส แต่ละตัว
+                var Timebossszzx1 = new Date(year , month ,d , hxx , mxx , s); // เวลาตายของบอส แต่ละตัว
+                var Timebossszzx = Timebossszzx1+25200000
                 var bossspawntimexx = new Date(Timebossszzx.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
                 var chktimenow = bossspawntimexx - now
                 //console.log(chktimenow)
@@ -186,7 +188,8 @@ function min2maxz(obj){
                         var hzz = tdzz[0]
                         var mzz = tdzz[1]
 
-                        var bossDeadTimezz = new Date(year , month ,d , hzz , mzz , s); // เวลาตายของบอส แต่ละตัว
+                        var bossDeadTimezz2 = new Date(year , month ,d , hzz , mzz , s); // เวลาตายของบอส แต่ละตัว
+                        var bossDeadTimezz = bossDeadTimezz2+25200000
                         var countDownDatezz = new Date(bossDeadTimezz.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime(); //แปลงเป็น วินานที่เพื่คำนวน
                        
                         var timespawnz = countDownDatezz+newobj2[j].cooldown  //เวลาบอสตาย + คูลดาว + 7hr
