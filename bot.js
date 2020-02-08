@@ -352,11 +352,11 @@ function alertz(){
                       minutes = "0" + minutes;
                     }
   
-                console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
+                //console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
   
               if ( timeAlerz > 285000 && timeAlerz < 315000 ){
                 ++alz
-                console.log(alz)
+                console.log(Alerz)
                 if (alz === 2 ){
                  
  
@@ -372,10 +372,20 @@ function alertz(){
           
               if ( timeAlerz > -75000 && timeAlerz < -45000 ){
               ++alz
+                  console.log(Alerz)
               if (alz === 2 ){
                     alz = 0
                     min2max()
                     savedatas()
+              }
+            }
+          
+             if ( timeAlerz > -135000 && timeAlerz < -105000 ){
+              ++alz
+                 console.log(SaveData)
+              if (alz === 2 ){
+                    alz = 0
+                   savedatas()
               }
             }
           
