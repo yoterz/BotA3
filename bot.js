@@ -384,15 +384,7 @@ function alertz(){
               }
             }
           
-          
-             if ( timeAlerz > -135000 && timeAlerz < -105000 ){
-              ++alz
-                 console.log("Alert")
-              if (alz === 2 ){
-                    alz = 0
-                    min2max()
-              }
-            }
+
           
           
        }
@@ -405,7 +397,7 @@ function alertz(){
                           if(newobj2){
                           console.log("มี")
                           api.updateBin({id: binID,data: newobj2,versioning: true}).then(); //******update data json */
-                          bot.channels.get(channelID).send("`> Save Data แล้ว` //ถ้าไม่มีการแก้ไขเวลา จะนำเอาเวลาเกิดรอบนี้ ไปเป็นเวลาบอสตาย ของรอบหน้า")
+                          bot.channels.get(channelID).send("`> Save Data แล้ว //ถ้าไม่มีการแก้ไขเวลา จะนำเอาเวลาเกิดรอบนี้ ไปเป็นเวลาบอสตาย ของรอบหน้า ที่ บรรทัด *<คาดเดา>`")
 
                         }else {
                           console.log("ไม่มี")
