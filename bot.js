@@ -397,7 +397,7 @@ function alertz(){
                           if(newobj2){
                           console.log("มี")
                           api.updateBin({id: binID,data: newobj2,versioning: true}).then(); //******update data json */
-                          bot.channels.get(channelID).send("`> Save Data แล้ว //ถ้าไม่มีการแก้ไขเวลา จะนำเอาเวลาเกิดรอบนี้ ไปเป็นเวลาบอสตาย ของรอบหน้า ที่ บรรทัด *<คาดเดา>`")
+                          bot.channels.get(channelID).send("`> Save Data แล้ว //ถ้าไม่มีการแก้ไขเวลา จะเซทเวลารอบต่อไปที่บรรทัด*<คาดเดา>โดยอัตโนมัติ`")
 
                         }else {
                           console.log("ไม่มี")
