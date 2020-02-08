@@ -404,8 +404,8 @@ function alertz(){
                           console.log("ไม่มี")
                           bot.channels.get(channelID).send("`!!!! Save Data ไม่ได้ ไม่มีข้อมูล ให้พิมพ์ list เพื่อตรวจสอบก่อน`")
                         }
-      sleep(3000);
-      min2max()
+      
+      setTimeout(min2max,3000)
   }
 
   function status(){     
