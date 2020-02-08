@@ -7,7 +7,7 @@ var channelID = process.env.ch_ID
 const JsonBinIoApi = require('jsonbin-io-api');
 const api = new JsonBinIoApi(process.env.Secret_key);
 //const api = new JsonBinIoApi(botconfig.SecretKey);
-var sleep = require('sleep');
+var sleep = require('system-sleep');
 var binID = process.env.bin_ID
 //var binID = botconfig.binID
 
@@ -375,12 +375,15 @@ function alertz(){
                   
                   if (alz === 1 ){
                       console.log("Alert")
-                        min2max()
+                      min2max()
+                      sleep(5000)
+                      console.log("SaveData")
+                      savedatas()
                   }
                   if (alz === 2 ){
-                      console.log("SaveData")
+                      min2max()
                     alz = 0
-                    savedatas()
+                    
               }
             }
           
