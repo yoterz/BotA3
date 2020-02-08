@@ -376,13 +376,11 @@ function alertz(){
                   if (alz === 1 ){
                       console.log("Alert")
                       min2max()
-                      console.log("SaveData")
-                      setTimeout(savedatas(),3000)
-                                          
-                  }
+                    }
                   
                   if (alz === 2 ){
-                     
+                      console.log("SaveData")
+                      savedatas()
                         alz = 0
                   }
               }
