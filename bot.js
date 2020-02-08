@@ -57,17 +57,7 @@ bot.on("message", (msg) => {
 
       if (msg.content.startsWith("save")){ 
         if (msg.channel.id === channelID){ 
-                
-                //console.log(newobj2)
-                if(newobj2){
-                  console.log("มี")
-                  api.updateBin({id: binID,data: newobj2,versioning: true}).then(); //******update data json */
-                  bot.channels.get(channelID).send("`> Save Data แล้ว`")
-                  
-                }else {
-                  console.log("ไม่มี")
-                  bot.channels.get(channelID).send("`!!!! Save Data ไม่ได้ ไม่มีข้อมูล ให้พิมพ์ list เพื่อตรวจสอบก่อน`")
-                }
+               savedatas()
                 
         }
       }   
@@ -385,6 +375,7 @@ function alertz(){
               if (alz === 2 ){
                     alz = 0
                     min2max()
+                    savedatas()
               }
             }
           
@@ -394,6 +385,18 @@ function alertz(){
   
   }
 
+
+  function savedatas(){    
+                          if(newobj2){
+                          console.log("มี")
+                          api.updateBin({id: binID,data: newobj2,versioning: true}).then(); //******update data json */
+                          bot.channels.get(channelID).send("`> Save Data แล้ว`")
+
+                        }else {
+                          console.log("ไม่มี")
+                          bot.channels.get(channelID).send("`!!!! Save Data ไม่ได้ ไม่มีข้อมูล ให้พิมพ์ list เพื่อตรวจสอบก่อน`")
+                        }
+  }
 
   function status(){     
   
