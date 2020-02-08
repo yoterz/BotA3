@@ -364,7 +364,7 @@ function alertz(){
   
                 console.log("timeAlerz : "+timeAlerz+" >>"+obj[i].name+" >> "+hours+":"+minutes)
   
-              if ( timeAlerz > 305000 && timeAlerz < 335000 ){
+              if ( timeAlerz > 285000 && timeAlerz < 315000 ){
                 ++alz
                 console.log(alz)
                 if (alz === 2 ){
@@ -380,7 +380,7 @@ function alertz(){
                 }
               }
           
-              if ( timeAlerz > -15000 && timeAlerz < 15000 ){
+              if ( timeAlerz > -75000 && timeAlerz < -45000 ){
               ++alz
               if (alz === 2 ){
                     alz = 0
