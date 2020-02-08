@@ -372,20 +372,25 @@ function alertz(){
           
               if ( timeAlerz > -75000 && timeAlerz < -45000 ){
               ++alz
-                  console.log("Alert")
-              if (alz === 2 ){
+                  
+                  if (alz === 1 ){
+                      console.log("Alert")
+                        min2max()
+                  }
+                  if (alz === 2 ){
+                      console.log("SaveData")
                     alz = 0
-                    min2max()
+                    savedatas()
               }
             }
           
           
              if ( timeAlerz > -135000 && timeAlerz < -105000 ){
               ++alz
-                 console.log("SaveData")
+                 console.log("Alert")
               if (alz === 2 ){
                     alz = 0
-                   savedatas()
+                    min2max()
               }
             }
           
@@ -400,7 +405,7 @@ function alertz(){
                           if(newobj2){
                           console.log("มี")
                           api.updateBin({id: binID,data: newobj2,versioning: true}).then(); //******update data json */
-                          bot.channels.get(channelID).send("`> Save Data แล้ว`")
+                          bot.channels.get(channelID).send("`> Save Data แล้ว` //ถ้าไม่มีการแก้ไขเวลา จะนำเอาเวลาเกิดรอบนี้ ไปเป็นเวลาบอสตาย ของรอบหน้า")
 
                         }else {
                           console.log("ไม่มี")
