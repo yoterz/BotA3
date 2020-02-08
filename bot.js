@@ -356,10 +356,9 @@ function alertz(){
   
               if ( timeAlerz > 285000 && timeAlerz < 315000 ){
                 ++alz
-                console.log(Alerz)
+                console.log("Alertz")
                 if (alz === 2 ){
-                 
- 
+                  
                 const embed = new Discord.RichEmbed()
                  .setColor(0xff0000)   //ใส่สี
                  //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
@@ -370,19 +369,20 @@ function alertz(){
                 }
               }
           
+          
               if ( timeAlerz > -75000 && timeAlerz < -45000 ){
               ++alz
-                  console.log(Alerz)
+                  console.log("Alert")
               if (alz === 2 ){
                     alz = 0
                     min2max()
-                    savedatas()
               }
             }
           
+          
              if ( timeAlerz > -135000 && timeAlerz < -105000 ){
               ++alz
-                 console.log(SaveData)
+                 console.log("SaveData")
               if (alz === 2 ){
                     alz = 0
                    savedatas()
