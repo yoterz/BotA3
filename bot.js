@@ -371,22 +371,22 @@ function alertz(){
           
           
               if ( timeAlerz > -75000 && timeAlerz < -45000 ){
-              ++alz
+                    ++alz
                   
                   if (alz === 1 ){
                       console.log("Alert")
                       min2max()
-                      
-                      
-                  }
-                  if (alz === 2 ){
                       console.log("SaveData")
-                      savedatas()
+                      setTimeout(savedatas(),3000)
+                                          
+                  }
+                  
+                  if (alz === 2 ){
+                     
                         alz = 0
-                    
+                  }
               }
-            }
-          
+
 
           
           
