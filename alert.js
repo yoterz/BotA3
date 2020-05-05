@@ -120,7 +120,7 @@ function status(){
     var currentUtcTimez = new Date();
     var now = new Date(currentUtcTimez.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' })).getTime();
     // เวลาที่จะถึง-เวลาปัจจุบัน
-    var distance = now+25200000 ;
+    var distance = now ;
     
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
