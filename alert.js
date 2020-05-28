@@ -4,8 +4,8 @@ var alz = 0
 var bot = new Discord.Client()
 
 var channelName = "general"
-var channelID = '574551663474507777' //asdwwq
-//var channelID = '574551663474507777'  //storz
+var channelID = '574551663474507777' //storz
+
 
 
 bot.on("ready",function(){
@@ -14,7 +14,7 @@ bot.on("ready",function(){
     console.log("Ready.....................")
 })
 
-setInterval(()=>status(), 30000);
+//setInterval(()=>status(), 30000);
 setInterval(()=>alertz(), 30000);
 
 bot.on("message", (msg) => {
