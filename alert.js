@@ -38,7 +38,7 @@ bot.on("message", (msg) => {
 
    timestart()
             
-        if (h == 9  && m == 59){
+        if (h == 9  && m == 58){
           ++alz
                   
           if (alz === 1 ){
@@ -52,7 +52,7 @@ bot.on("message", (msg) => {
         }
 
 
-        if (h == 17  && m == 59){
+        if (h == 17  && m == 58){
           ++alz
                   
           if (alz === 1 ){
@@ -66,7 +66,7 @@ bot.on("message", (msg) => {
         }
 
 
-        if (h == 19  && m == 59){
+        if (h == 18  && m == 58){
           ++alz
                   
           if (alz === 1 ){
@@ -89,7 +89,7 @@ bot.on("message", (msg) => {
     const embed = new Discord.RichEmbed()
     .setColor(0xff0000)   //ใส่สี
     //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
-    .addField("```World boss #```","```yaml\n อีก 1 นาที : บอสโลกเกิด```")
+    .addField("```World boss #```","```yaml\n อีก 2 นาที : บอสโลกเกิด```")
     .setTimestamp()  //เวลาด้านล่างสุดผ
      bot.channels.get(channelID).send({embed})
      
