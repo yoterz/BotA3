@@ -38,35 +38,35 @@ bot.on("message", (msg) => {
 
    timestart()
             
-        if (h == 9  && m == 58){
-          ++alz
-                  
-          if (alz === 1 ){
-              console.log("Alert")
-              sendEmbed()
-            }
-          
-          if (alz === 2 ){
-             alz = 0
-          }
-        }
-
-
-        if (h == 17  && m == 58){
-          ++alz
-                  
-          if (alz === 1 ){
-              console.log("Alert")
-              sendEmbed()
-            }
-          
-          if (alz === 2 ){
-             alz = 0
-          }
-        }
-
-
         if (h == 10  && m == 55){
+          ++alz
+                  
+          if (alz === 1 ){
+              console.log("Alert")
+              sendEmbed()
+            }
+          
+          if (alz === 2 ){
+             alz = 0
+          }
+        }
+
+
+        if (h == 15  && m == 25){
+          ++alz
+                  
+          if (alz === 1 ){
+              console.log("Alert")
+              sendEmbed()
+            }
+          
+          if (alz === 2 ){
+             alz = 0
+          }
+        }
+
+
+        if (h == 22  && m == 55){
           ++alz
                   
           if (alz === 1 ){
