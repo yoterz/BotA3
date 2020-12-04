@@ -44,7 +44,7 @@ bot.on("message", (msg) => {
           ++alz
                   
           if (alz === 1 ){
-              console.log("Alert")
+              console.log("AlertBoss")
               sendEmbedBoss()
             }
           
@@ -57,7 +57,7 @@ bot.on("message", (msg) => {
           ++alz
                   
           if (alz === 1 ){
-              console.log("Alert")
+              console.log("AlertPk")
               sendEmbedPk()
             }
           
@@ -70,7 +70,7 @@ bot.on("message", (msg) => {
           ++alz
                   
           if (alz === 1 ){
-              console.log("Alert")
+              console.log("AlertBoss")
               sendEmbedBoss()
             }
           
@@ -83,7 +83,7 @@ bot.on("message", (msg) => {
           ++alz
                   
           if (alz === 1 ){
-              console.log("Alert")
+              console.log("AlertTD")
               sendEmbedTd()
             }
           
@@ -96,7 +96,7 @@ bot.on("message", (msg) => {
           ++alz
                   
           if (alz === 1 ){
-              console.log("Alert")
+              console.log("AlertPk")
               sendEmbedPk()
             }
           
@@ -109,7 +109,7 @@ bot.on("message", (msg) => {
           ++alz
                   
           if (alz === 1 ){
-              console.log("Alert")
+              console.log("AlertBoss")
               sendEmbedBoss()
             }
           
@@ -122,7 +122,7 @@ bot.on("message", (msg) => {
           ++alz
                   
           if (alz === 1 ){
-              console.log("Alert")
+              console.log("AlertTD")
               sendEmbedTd()
             }
           
