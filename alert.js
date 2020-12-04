@@ -24,7 +24,9 @@ bot.on("message", (msg) => {
   if (msg.content.startsWith("qqqq")){
     timestart()
     console.log(h+" : "+m)
-    sendEmbed()
+      sendEmbedBoss()
+      sendEmbedTd()
+      sendEmbedPk()
   }   
 
  
