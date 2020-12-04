@@ -29,6 +29,11 @@ bot.on("message", (msg) => {
       sendEmbedPk()
   }   
 
+      if (msg.content.startsWith("เบีย")){
+   
+     msg.channel.send("```ขี้เหล่```")
+     
+  }  
  
 
     
