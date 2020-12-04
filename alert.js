@@ -31,7 +31,7 @@ bot.on("message", (msg) => {
 
       if (msg.content.startsWith("เบีย")){
    
-     msg.channel.send("```ขี้เหล่```")
+     msg.channel.send("```ขี้เหร่```")
      
   }  
  
