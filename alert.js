@@ -29,12 +29,27 @@ bot.on("message", (msg) => {
       sendEmbedPk()
   }   
 
-      if (msg.content.startsWith("เบีย")){
+  if (msg.content.startsWith("เบีย")){
    
      msg.channel.send("```ขี้เหร่เนะ```")
      
   }  
  
+   if (msg.content.startsWith("aaa")){
+   
+        const embed = new Discord.RichEmbed()
+       // .setTitle(titel)  //หัวข้อ
+        //.setAuthor("Boss Timer ThBDO", "https://www.picz.in.th/images/2018/06/22/48XhJt.png")  //icon หัวขอ
+        .setColor(0x112263)   //ใส่สี
+        //.setDescription("```cs\n วัน '"+dayz+"'  เวลา '"+chkboss().t+"' น. \n\n ####  "+chkboss().boss+"  ####```")   //รายละเอียด
+       // .addField("วัน "+dayz+" เวลา "+chkboss().t,"```cs\n"+"บอสตัวต่อไป #"+chkboss().boss+"```")
+       // .setFooter("Boss Timer ThBDO "+botconfig.version+" พิมพ์ info", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Twemoji_1f437.svg/2000px-Twemoji_1f437.svg.png") //รูป ข้อความล่างสุด
+       .setImage("https://cdn.discordapp.com/attachments/574551663474507777/779687618387902475/2.png")     //รูปใหญ่
+       // .setThumbnail(chkboss().imgboss)   //รูปเล็กขวาบนผ
+        .setTimestamp()  //เวลาด้านล่างสุดผ
+         msg.channel.send({embed})
+     
+  }  
 
     
 })
