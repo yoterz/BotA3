@@ -150,7 +150,7 @@ bot.on("message", (msg) => {
     const embed = new Discord.RichEmbed()
     .setColor(0xff0000)   //ใส่สี
     //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
-    .addField("```Tower Defense #```","```yaml\n อีก 5 นาที : การรุกรานเงามืด```")
+    .addField("```Dark Invasion #```","```yaml\n อีก 5 นาที : การรุกรานเงามืด(TD)```")
     .setTimestamp()  //เวลาด้านล่างสุดผ
      bot.channels.get(channelID).send({embed})
  }
@@ -160,7 +160,7 @@ bot.on("message", (msg) => {
     const embed = new Discord.RichEmbed()
     .setColor(0xff0000)   //ใส่สี
     //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
-    .addField("```Player Kill #```","```yaml\n อีก 5 นาที : อุบัติเงามืด```")
+    .addField("```Dark Presence #```","```yaml\n อีก 5 นาที : อุบัติเงามืด(PK)```")
     .setTimestamp()  //เวลาด้านล่างสุดผ
      bot.channels.get(channelID).send({embed})
  }
