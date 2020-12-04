@@ -53,7 +53,19 @@ bot.on("message", (msg) => {
           }
         }
 
-
+        if (h == 13  && m == 25){
+          ++alz
+                  
+          if (alz === 1 ){
+              console.log("Alert")
+              sendEmbedPk()
+            }
+          
+          if (alz === 2 ){
+             alz = 0
+          }
+        }
+     
         if (h == 15  && m == 25){
           ++alz
                   
@@ -67,7 +79,32 @@ bot.on("message", (msg) => {
           }
         }
 
+        if (h == 19  && m == 25){
+          ++alz
+                  
+          if (alz === 1 ){
+              console.log("Alert")
+              sendEmbedTd()
+            }
+          
+          if (alz === 2 ){
+             alz = 0
+          }
+        }     
 
+        if (h == 20  && m == 25){
+          ++alz
+                  
+          if (alz === 1 ){
+              console.log("Alert")
+              sendEmbedPk()
+            }
+          
+          if (alz === 2 ){
+             alz = 0
+          }
+        }     
+     
         if (h == 22  && m == 55){
           ++alz
                   
@@ -81,7 +118,19 @@ bot.on("message", (msg) => {
           }
         }
          
-  
+        if (h == 23  && m == 25){
+          ++alz
+                  
+          if (alz === 1 ){
+              console.log("Alert")
+              sendEmbedTd()
+            }
+          
+          if (alz === 2 ){
+             alz = 0
+          }
+        }
+     
  
  }
 
