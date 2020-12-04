@@ -43,7 +43,7 @@ bot.on("message", (msg) => {
                   
           if (alz === 1 ){
               console.log("Alert")
-              sendEmbed()
+              sendEmbedBoss()
             }
           
           if (alz === 2 ){
@@ -57,7 +57,7 @@ bot.on("message", (msg) => {
                   
           if (alz === 1 ){
               console.log("Alert")
-              sendEmbed()
+              sendEmbedBoss()
             }
           
           if (alz === 2 ){
@@ -71,7 +71,7 @@ bot.on("message", (msg) => {
                   
           if (alz === 1 ){
               console.log("Alert")
-              sendEmbed()
+              sendEmbedBoss()
             }
           
           if (alz === 2 ){
@@ -84,7 +84,7 @@ bot.on("message", (msg) => {
  }
 
 
- function sendEmbed(){
+ function sendEmbedBoss(){
 
     const embed = new Discord.RichEmbed()
     .setColor(0xff0000)   //ใส่สี
@@ -92,8 +92,26 @@ bot.on("message", (msg) => {
     .addField("```World boss #```","```yaml\n อีก 5 นาที : บอสโลกเกิด```")
     .setTimestamp()  //เวลาด้านล่างสุดผ
      bot.channels.get(channelID).send({embed})
-     
+ }
 
+ function sendEmbedTd(){
+
+    const embed = new Discord.RichEmbed()
+    .setColor(0xff0000)   //ใส่สี
+    //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
+    .addField("```Tower Defense #```","```yaml\n อีก 5 นาที : การรุกรานเงามืด```")
+    .setTimestamp()  //เวลาด้านล่างสุดผ
+     bot.channels.get(channelID).send({embed})
+ }
+
+ function sendEmbedPk(){
+
+    const embed = new Discord.RichEmbed()
+    .setColor(0xff0000)   //ใส่สี
+    //.setDescription("```css\n#"+alertz+"```")   //รายละเอียด
+    .addField("```Player Kill #```","```yaml\n อีก 5 นาที : อุบัติเงามืด```")
+    .setTimestamp()  //เวลาด้านล่างสุดผ
+     bot.channels.get(channelID).send({embed})
  }
 
  function timestart(){
