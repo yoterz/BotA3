@@ -60,7 +60,7 @@ bot.on("message", (msg) => {
 
    timestart()
             
-        if (h == 10  && m == 55){
+        if (h == 11  && m == 55){
           ++alz
                   
           if (alz === 1 ){
