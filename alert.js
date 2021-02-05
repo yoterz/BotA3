@@ -73,7 +73,7 @@ bot.on("message", (msg) => {
           }
         }
 
-        if (h == 13  && m == 25){
+        if (h == 12  && m == 25){
           ++alz
                   
           if (alz === 1 ){
