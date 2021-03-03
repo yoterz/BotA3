@@ -35,11 +35,11 @@ bot.on("message", (msg) => {
         //.setAuthor("Boss Timer ThBDO", "https://www.picz.in.th/images/2018/06/22/48XhJt.png")  //icon หัวขอ
         .setColor(0x112263)   //ใส่สี
         //.setDescription("```cs\n วัน '"+dayz+"'  เวลา '"+chkboss().t+"' น. \n\n ####  "+chkboss().boss+"  ####```")   //รายละเอียด
-       .addField("```World boss #```","```yaml\n ประกาศๆ : บอสโลกจะเกิดแล้วววว```")
+       .addField("","```yaml ประกาศๆ : บอสโลกจะเกิดแล้วววว```")
        // .setFooter("Boss Timer ThBDO "+botconfig.version+" พิมพ์ info", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Twemoji_1f437.svg/2000px-Twemoji_1f437.svg.png") //รูป ข้อความล่างสุด
        //.setImage("https://www.shining-moon.com/helheim/images/thumb/e/e5/WBB.png/800px-WBB.png")     //รูปใหญ่
        // .setThumbnail(chkboss().imgboss)   //รูปเล็กขวาบนผ
-        .setTimestamp()  //เวลาด้านล่างสุดผ
+        //.setTimestamp()  //เวลาด้านล่างสุดผ
       msg.channel.send({embed})
       msg.channel.send({embed})
       msg.channel.send({embed})
