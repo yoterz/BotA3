@@ -37,10 +37,12 @@ bot.on("message", (msg) => {
         //.setDescription("```cs\n วัน '"+dayz+"'  เวลา '"+chkboss().t+"' น. \n\n ####  "+chkboss().boss+"  ####```")   //รายละเอียด
        // .addField("วัน "+dayz+" เวลา "+chkboss().t,"```cs\n"+"บอสตัวต่อไป #"+chkboss().boss+"```")
        // .setFooter("Boss Timer ThBDO "+botconfig.version+" พิมพ์ info", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Twemoji_1f437.svg/2000px-Twemoji_1f437.svg.png") //รูป ข้อความล่างสุด
-       .setImage("https://gamewith-en.akamaized.net/img/e8b8ea8b7a04ed738e8731df63108f65.jpg")     //รูปใหญ่
+       .setImage("https://www.shining-moon.com/helheim/images/thumb/e/e5/WBB.png/800px-WBB.png")     //รูปใหญ่
        // .setThumbnail(chkboss().imgboss)   //รูปเล็กขวาบนผ
         .setTimestamp()  //เวลาด้านล่างสุดผ
          msg.channel.send({embed})
+       msg.channel.send({embed})
+       msg.channel.send({embed})
     // msg.channel.send("```ขี้เหร่เนะ```")
      
   }  
