@@ -33,7 +33,7 @@ bot.on("message", (msg) => {
         const embed = new Discord.RichEmbed()
        // .setTitle(titel)  //หัวข้อ
         //.setAuthor("Boss Timer ThBDO", "https://www.picz.in.th/images/2018/06/22/48XhJt.png")  //icon หัวขอ
-        .setColor(0xFFCCCC)   //ใส่สี
+        .setColor(0xFF00FF)   //ใส่สี
         .setDescription("```yaml\n ประกาศๆ : บอสโลกจะเกิดแล้วววว```")   //รายละเอียด
        //.addField("ผแแฟ","```yaml ประกาศๆ : บอสโลกจะเกิดแล้วววว```")
        // .setFooter("Boss Timer ThBDO "+botconfig.version+" พิมพ์ info", "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Twemoji_1f437.svg/2000px-Twemoji_1f437.svg.png") //รูป ข้อความล่างสุด
