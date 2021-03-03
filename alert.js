@@ -43,7 +43,9 @@ bot.on("message", (msg) => {
       msg.channel.send({embed})
       msg.channel.send({embed})
       msg.channel.send({embed})
-     msg.channel.send('@A3 '+msg.content)
+      const role = message.guild.roles.find(role => role.name === "A3");
+      msg.channel.send(`${role} something something`+msg.content)
+      
      
   }  
  
