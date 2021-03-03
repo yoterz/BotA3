@@ -43,7 +43,7 @@ bot.on("message", (msg) => {
       msg.channel.send({embed})
       msg.channel.send({embed})
       msg.channel.send({embed})
-    // msg.channel.send("```ขี้เหร่เนะ```")
+     msg.channel.send("```@A3 "+msg.content+"```")
      
   }  
  
